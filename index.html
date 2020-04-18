@@ -277,6 +277,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    Quickstart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#useful-makefile-targets" class="md-nav__link">
     Useful Makefile Targets
   </a>
@@ -448,6 +455,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    Quickstart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#useful-makefile-targets" class="md-nav__link">
     Useful Makefile Targets
   </a>
@@ -541,6 +555,58 @@
 <ul>
 <li>There's a local Docker Compose setup for easy development. Also, all AWS services (except Postgres) run in containers</li>
 </ul>
+<h2 id="quickstart">Quickstart<a class="headerlink" href="#quickstart" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Install some tools</p>
+<ul>
+<li><a href="https://yeoman.io/">Yeoman</a></li>
+<li><a href="https://www.docker.com/">Docker</a></li>
+<li><a href="https://aws.amazon.com/cli/">AWS CLI v2+</a></li>
+</ul>
+</li>
+<li>
+<p>Install the Yeoman generator for Prismatopia
+<div class="highlight"><pre><span></span><code>    yarn global add generator-prismatopia
+</code></pre></div></p>
+</li>
+<li>
+<p>Create your new project
+<div class="highlight"><pre><span></span><code>    yo prismatopia
+</code></pre></div></p>
+</li>
+<li>
+<p>Start Prismatopia locally
+<div class="highlight"><pre><span></span><code>    make local-up
+</code></pre></div></p>
+</li>
+<li>
+<p>Deploy the data model
+<div class="highlight"><pre><span></span><code>    make local-prisma-deploy
+</code></pre></div></p>
+</li>
+<li>
+<p>Get a token for your local Prisma
+<div class="highlight"><pre><span></span><code>    make local-prisma-token
+</code></pre></div></p>
+</li>
+<li>
+<p>Open the Prisma playground</p>
+<ul>
+<li><a href="http://localhost:7000">http://localhost:7000</a></li>
+</ul>
+</li>
+<li>
+<p>Open the 'HTTP Headers' setting in the GraphQL Platground and set your token, like this:
+<div class="highlight"><pre><span></span><code>    <span class="p">{</span>
+      <span class="nt">&quot;Authorization&quot;</span><span class="p">:</span><span class="s2">&quot;Bearer &lt;The token from &#39;make local-prisma-token&#39;&gt;&quot;</span>
+    <span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Run some queries!</p>
+</li>
+</ol>
 <h2 id="useful-makefile-targets">Useful Makefile Targets<a class="headerlink" href="#useful-makefile-targets" title="Permanent link">&para;</a></h2>
 <p>First, it is very important to note that there is a Makefile in the root directly that is intended to provide all of the controls that you'll need for both local development and AWS operations.</p>
 <h3 id="make-init"><code>make init</code><a class="headerlink" href="#make-init" title="Permanent link">&para;</a></h3>

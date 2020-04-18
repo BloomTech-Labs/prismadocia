@@ -1,0 +1,24 @@
+site_name: Prismadocia
+repo_url: https://github.com/Lambda-School-Labs/prismadocia
+site_description: Prismatopia documentation
+site_author: Bernie Durfee (Lambda School Labs)
+
+theme:
+  name: 'material'
+
+markdown_extensions:
+  - tables
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+    - Overview: 'index.md'
+    - Apollo Layer: 'apollo.md'
+    - Prisma Layer: 'prisma.md'
+    - AWS Layer: 'aws.md'

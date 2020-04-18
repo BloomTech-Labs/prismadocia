@@ -37,6 +37,50 @@ Here are the technologies in the Prismatopia stack...
 
 - There's a local Docker Compose setup for easy development. Also, all AWS services (except Postgres) run in containers
 
+## Quickstart
+
+1. Install some tools
+      - [Yeoman](https://yeoman.io/)
+      - [Docker](https://www.docker.com/)
+      - [AWS CLI v2+](https://aws.amazon.com/cli/)
+
+1. Install the Yeoman generator for Prismatopia
+``` bash
+    yarn global add generator-prismatopia
+```
+
+1. Create your new project
+``` bash
+    yo prismatopia
+```
+
+1. Start Prismatopia locally
+``` bash
+    make local-up
+```
+
+1. Deploy the data model
+```bash
+    make local-prisma-deploy
+```
+
+1. Get a token for your local Prisma
+```bash
+    make local-prisma-token
+```
+
+1. Open the Prisma playground
+    - <http://localhost:7000>
+
+1. Open the 'HTTP Headers' setting in the GraphQL Platground and set your token, like this:
+``` json
+    {
+      "Authorization":"Bearer <The token from 'make local-prisma-token'>"
+    }
+```
+
+1. Run some queries!
+
 ## Useful Makefile Targets
 
 First, it is very important to note that there is a Makefile in the root directly that is intended to provide all of the controls that you'll need for both local development and AWS operations.

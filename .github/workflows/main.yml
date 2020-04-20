@@ -28,7 +28,7 @@ jobs:
           files: .
           config_file: ".markdownlint.yml"
 
-      - run: mkdocs build
+      - run: pipenv run mkdocs build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

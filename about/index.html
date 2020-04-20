@@ -19,7 +19,7 @@
     
     
       
-        <title>AWS Layer - Prismatopia</title>
+        <title>About - Prismatopia</title>
       
     
     
@@ -54,7 +54,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-aws-layer" class="md-skip">
+        <a href="#about-prismatopia" class="md-skip">
           Skip to content
         </a>
       
@@ -81,7 +81,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              AWS Layer
+              About
             
           </span>
         </div>
@@ -214,6 +214,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../aws/" title="AWS Layer" class="md-nav__link">
+      AWS Layer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -225,14 +237,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        AWS Layer
+        About
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
         </span>
       </label>
     
-    <a href="./" title="AWS Layer" class="md-nav__link md-nav__link--active">
-      AWS Layer
+    <a href="./" title="About" class="md-nav__link md-nav__link--active">
+      About
     </a>
     
       
@@ -251,22 +263,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#deploy-to-aws" class="md-nav__link">
-    Deploy to AWS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-the-aws-infrastructure" class="md-nav__link">
-    Build the AWS infrastructure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aws-makefile-targets" class="md-nav__link">
-    AWS Makefile Targets
+  <a href="#license" class="md-nav__link">
+    License
   </a>
   
 </li>
@@ -275,18 +273,6 @@
   
 </nav>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../about/" title="About" class="md-nav__link">
-      About
-    </a>
   </li>
 
     
@@ -316,22 +302,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#deploy-to-aws" class="md-nav__link">
-    Deploy to AWS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-the-aws-infrastructure" class="md-nav__link">
-    Build the AWS infrastructure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aws-makefile-targets" class="md-nav__link">
-    AWS Makefile Targets
+  <a href="#license" class="md-nav__link">
+    License
   </a>
   
 </li>
@@ -348,7 +320,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Lambda-School-Labs/prismadocia/edit/master/docs/aws.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Lambda-School-Labs/prismadocia/edit/master/docs/about.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -356,20 +328,24 @@
                   
                 
                 
-                <h1 id="the-aws-layer">The AWS Layer<a class="headerlink" href="#the-aws-layer" title="Permanent link">&para;</a></h1>
-<p>"Code all the things!" 👈</p>
-<h2 id="deploy-to-aws">Deploy to AWS<a class="headerlink" href="#deploy-to-aws" title="Permanent link">&para;</a></h2>
-<p>Now the fun part! You have your local Prisma datamodel ready and your Apollo schema and resolvers are working, time to deploy to production!</p>
-<h2 id="build-the-aws-infrastructure">Build the AWS infrastructure<a class="headerlink" href="#build-the-aws-infrastructure" title="Permanent link">&para;</a></h2>
-<p>Prismatopia uses AWS Cloudformation to build a network and all supporting infrastructure for running your GraphQL backend in AWS. The entire process is scripted using CloudFormation, which makes it repeatable and robust.</p>
-<p>The scripts are in the <code>aws</code> folder and are divided up in order to minimize bundling too much infrastructure in a single stack.</p>
-<ol>
-<li>Run <code>make aws-deploy-app</code> to deploy all of the application level infrastructure that's shared between different environments.</li>
-<li>Run <code>make aws-deploy-env</code> to deploy all of the environment level infrastructure, including the Postgres database, Prisma service and Apollo service.</li>
-<li>Now, deploy your Prisma datamodel using <code>make aws-prisma-deploy</code></li>
-<li>You can now access your services using <code>apollo.&lt;yourdomain&gt;</code> and <code>prisma.&lt;yourdomain&gt;</code></li>
-</ol>
-<h2 id="aws-makefile-targets">AWS Makefile Targets<a class="headerlink" href="#aws-makefile-targets" title="Permanent link">&para;</a></h2>
+                <h1 id="about-prismatopia">About Prismatopia<a class="headerlink" href="#about-prismatopia" title="Permanent link">&para;</a></h1>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p>MIT License</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
                 
               
               
@@ -388,7 +364,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../prisma/" title="Prisma Layer" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../aws/" title="AWS Layer" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -397,25 +373,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Prisma Layer
+                AWS Layer
               </div>
             </div>
           </a>
         
-        
-          <a href="../about/" title="About" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                About
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
-            </div>
-          </a>
         
       </nav>
     </div>

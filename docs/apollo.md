@@ -9,19 +9,14 @@ Apollo has built-in support for authentication using an OIDC compliant identity 
 1. Create a new Okta developer account at <https://developer.okta.com>
 1. Note your Okta domain, it will be something like: `https://dev-123456-admin.okta.com/`
 1. Set the values for the following environment variables in your `.env` file:
-    - APOLLO_TOKEN_ENDPOINT
-      - `https://<your okta domain>/oauth2/default/v1/token`
-    - APOLLO_JWKS_URI
-      - `https://<your okta domain>/oauth2/default/v1/keys`
-    - APOLLO_JWT_ISSUER
-      - `https://<your okta domain>/oauth2/default`
+      - `APOLLO_TOKEN_ENDPOINT=https://<your okta domain>/oauth2/default/v1/token`
+      - `APOLLO_JWKS_URI=https://<your okta domain>/oauth2/default/v1/keys`
+      - `APOLLO_JWT_ISSUER=https://<your okta domain>/oauth2/default`
 1. Add a new Native application
     - Enable Authorization Code and Resource Owner Password grant types
     - Set the following environment variabels in your `.env` file:
-      - APOLLO_CLIENT_ID
-        - The Client ID for your application
-      - APOLLO_CLIENT_SECRET
-        - The Client Secret for your application
+        - `APOLLO_CLIENT_ID=<The Client ID for your application>`
+        - `APOLLO_CLIENT_SECRET=<The Client Secret for your application>`
 1. Create a test user and save the username and password in your `.env` file:
     - APOLLO_TEST_USERNAME
     - APOLLO_TEST_PASSWORD
@@ -56,16 +51,13 @@ At this point, you can continue to iterate between cherry picking Prisma API typ
 
 You should _never_ redefine types that are already defined in Prisma, though you may want to extend them or create new types if your Apollo resovers talk to APIs other than Prisma.
 
-## Local Apollo Make Targets
+## Apollo Make Targets
 
-### `make apollo-build`
+!!! success "`make apollo-build`"
+    Builds the Apollo Docker image
 
-Builds the Apollo Docker image
+!!! success "`make apollo-push`"
+    Builds and pushes the Apollo Docker image to the Docker repository specified by APOLLO_CONTAINER_IMAGE
 
-### `make apollo-push`
-
-Builds and pushes the Apollo Docker image to the Docker repository specified by APOLLO_CONTAINER_IMAGE
-
-### `make apollo-token`
-
-Generates a JWT for authenticating to Apollo. Very handy for testing!
+!!! success "`make apollo-token`"
+    Generates a JWT for authenticating to Apollo. Very handy for testing!
